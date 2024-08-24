@@ -30,13 +30,12 @@ waiting(대기) : 실행중 입출력을 받아 프로세스가 실행을 중지
 Terminated(종료) : 프로세스가 완전히 종료되어 더 이상 실행되지 않는 상태입니다.  
 
 ### 4. preemptive/non-preemptive 에서 존재할 수 없는 상태가 있을까요?
-❓
+
 == 선점형 비선점형 
 
--네, 존재합니다. 예를 들어 블록 상태가 있습니다. 블록 상태는 작업 실행이 불가능한 상태로, 작업이 사전 정의된 다른 작업이 완료될 때까지 수행이 중지되는 상태입니다. 
-따라서 블록 상태는 preemptive 및 non-preemptive 스케줄링 모두에 존재할 수 없습니다.
+-네, 존재합니다. 비선점형 같은 경우는 어떠한 경우에도 선점되지 않고 자발적으로 이루어진다는 점에서,  
+실행-> 준비 , 실행->대기 와 같은 상태는 존재할 수 없는 상태라고 생각합니다.
 
-> 입/출력 등의 특정한 Event 를 기다리게 된다. 할당받았던 프로세서를 반납하고, asleep(blocked) 상태가 되어I/O 자원 등 필요한 자원을 할당 받기를 기다린다.
 
 ### 5. Memory가 부족할 경우, Process는 어떠한 상태로 변화할까요?
 ❓
@@ -55,3 +54,5 @@ Terminated : 메모리가 부족한 상황에서도 계속해서 프로세스를
 https://peonyf.tistory.com/entry/CPU-Scheduler
 
 https://velog.io/@dbghwns11/CS%EC%A0%95%EB%A6%AC-5
+
+https://www.pymoon.com/entry/Linux-%EB%A9%94%EB%AA%A8%EB%A6%AC-%EB%B6%80%EC%A1%B1-%EC%8B%9C-%EC%96%B4%EB%96%A4-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4%EA%B0%80-%EC%A3%BD%EB%8A%94%EA%B1%B8%EA%B9%8C
